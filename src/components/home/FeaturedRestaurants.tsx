@@ -3,7 +3,6 @@
 import React from 'react';
 import useSWR from 'swr';
 import { RestaurantCard, RestaurantItem } from './RestaurantCard';
-import { Skeleton } from '@/components/ui';
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
