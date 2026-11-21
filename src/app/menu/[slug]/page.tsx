@@ -292,7 +292,7 @@ export default function QrMenuPage({ params }: { params: Promise<{ slug: string 
       </div>
 
       {/* Mobile Sticky Bottom Bar */}
-      {totalCount > 0 && (
+      {totalCount() > 0 && (
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur border-t border-border lg:hidden z-40">
           <Button
             onClick={() => router.push(`/checkout?table=${tableParam}`)}
@@ -301,7 +301,7 @@ export default function QrMenuPage({ params }: { params: Promise<{ slug: string 
           >
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-xs font-bold">
-                {totalCount}
+                {totalCount()}
               </span>
               <span>View Order</span>
             </div>
